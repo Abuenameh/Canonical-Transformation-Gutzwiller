@@ -55,11 +55,10 @@ int main() {
 	memAllocHost<real>(&f_tb_host, &f_tb_dev, 1);
 
 	cudaSetDeviceFlags(cudaDeviceMapHost);
-	cudaGLSetGLDevice(0);
 	cublasCreate_v2(&cublasHd);
 
 	U = 1;
-	J = 0.001;
+	J = 0.1;
 	mu = 0.5;
 
 	initProb(x, nbd, l, u, dim);
